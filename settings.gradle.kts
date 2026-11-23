@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "schach-android"
+rootProject.name = "chesshost"
 include(":app")

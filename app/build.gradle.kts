@@ -9,11 +9,11 @@ plugins {
 android {
     // Neutral placeholder namespace: no personal data, no domain claimed.
     // Replace it with your own reverse-domain id if you publish to a store.
-    namespace = "org.example.schach"
+    namespace = "org.example.chesshost"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "org.example.schach"
+        applicationId = "org.example.chesshost"
         minSdk = 26
         targetSdk = 37
         versionCode = 1

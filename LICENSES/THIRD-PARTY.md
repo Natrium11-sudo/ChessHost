@@ -1,6 +1,6 @@
 # Third-party components and licences
 
-Schach as a whole is released under the **GNU General Public License v3.0**
+ChessHost as a whole is released under the **GNU General Public License v3.0**
 (see [`../LICENSE`](../LICENSE)). This file lists every third-party component
 that ends up in the app, what licence it uses and where its source can be
 found.

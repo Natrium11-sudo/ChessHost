@@ -1,11 +1,11 @@
-# Schach
+# ChessHost
 
 **A native Android chess app — play, watch and analyse.** Kotlin and Jetpack
 Compose with Stockfish, Fairy-Stockfish, Ethereal and Monolith on board, the
 neural Maia 3 as a human-like opponent, and any OpenAI-compatible chat model as
 a player.
 
-*Schach* is German for chess; the app itself is fully translated into English.
+The app ships with an English and a German UI, switchable in the settings.
 
 <table>
   <tr>
@@ -36,7 +36,7 @@ Screenshots taken on a Pixel 10 Pro XL emulator (Android 17, API 37), English UI
 
 Beta builds are published as GitHub pre-releases:
 
-**[Download the latest beta APK](https://github.com/Natrium11-sudo/Schach/releases/latest)**
+**[Download the latest beta APK](https://github.com/Natrium11-sudo/ChessHost/releases/latest)**
 
 - Android 8.0 (API 26) or newer, `arm64-v8a` or `x86_64`.
 - Signed with a self-signed release key, so Android shows the usual "install from
@@ -179,7 +179,7 @@ or LM Studio — no key needed. There is a connection test in the settings scree
 ## Project layout
 
 ```
-app/src/main/java/org/example/schach/
+app/src/main/java/org/example/chesshost/
   chess/        board, move generation, rules, Chess960, FEN/SAN/PGN, clocks
   engine/       engine protocol, UCI and ONNX backends, LLM engine, packs
   data/         Room database, settings, PGN import/export
