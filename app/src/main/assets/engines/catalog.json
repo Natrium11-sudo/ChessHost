@@ -1,0 +1,226 @@
+{
+  "schema": 1,
+  "updated": "2026-11-22",
+  "engines": [
+    {
+      "id": "stockfish-17.1",
+      "name": "Stockfish",
+      "version": "17.1",
+      "backend": "uci_native",
+      "origin": "download",
+      "binary": "libstockfish.so",
+      "elo": 3630,
+      "license": "GPLv3",
+      "homepage": "https://stockfishchess.org",
+      "sourceUrl": "https://github.com/official-stockfish/Stockfish",
+      "description": "Der stärkste freie Schachcomputer der Welt. Die Binary in der App ist nur 1 MB groß – die beiden NNUE-Netze (rund 78 MB) lädt sie beim Installieren nach. Kompromisslos, sehr tief, ideal zum Analysieren.",
+      "tags": [
+        "Stark",
+        "Analyse",
+        "Netz-Download"
+      ],
+      "config": {
+        "threads": 1,
+        "hashMb": 32,
+        "evalFile": "nn-1111cefa1111.nnue",
+        "evalFileSmall": "nn-37f18f62d772.nnue"
+      },
+      "files": [
+        {
+          "name": "nn-1111cefa1111.nnue",
+          "url": "https://tests.stockfishchess.org/api/nn/nn-1111cefa1111.nnue",
+          "sha256": "1111cefa11116b77161bd4b14dab4c50f26e5920c756f4861592be3dcd6de174",
+          "size": 74874478
+        },
+        {
+          "name": "nn-37f18f62d772.nnue",
+          "url": "https://tests.stockfishchess.org/api/nn/nn-37f18f62d772.nnue",
+          "sha256": "37f18f62d772f3107e1d6aaca3898c130c3c86f2ab63e6555fbbca20635a899d",
+          "size": 3519630
+        }
+      ]
+    },
+    {
+      "id": "fairy-stockfish",
+      "name": "Fairy-Stockfish",
+      "version": "klassisch",
+      "backend": "uci_native",
+      "origin": "optional",
+      "binary": "libfairyfish.so",
+      "license": "GPLv3",
+      "homepage": "https://fairy-stockfish.github.io",
+      "sourceUrl": "https://github.com/fairy-stockfish/Fairy-Stockfish",
+      "description": "Erweiterung von Stockfish für Schachvarianten (Chess960, Crazyhouse und viele mehr). Ohne Netz rechnet sie klassisch – dafür klein und sparsam.",
+      "tags": [
+        "Varianten",
+        "Sparsam"
+      ],
+      "config": {
+        "threads": 1,
+        "hashMb": 64
+      }
+    },
+    {
+      "id": "fairy-stockfish-nnue",
+      "name": "Fairy-Stockfish · NNUE",
+      "backend": "uci_native",
+      "origin": "download",
+      "binary": "libfairyfish.so",
+      "license": "GPLv3",
+      "homepage": "https://fairy-stockfish.github.io",
+      "sourceUrl": "https://github.com/fairy-stockfish/Fairy-Stockfish",
+      "description": "Dieselbe Fairy-Stockfish mit nachgeladenem NNUE-Netz. Deutlich stärker als die klassische Bewertung; das Netz ist rund 48 MB groß.",
+      "tags": [
+        "Varianten",
+        "Stark"
+      ],
+      "config": {
+        "threads": 1,
+        "hashMb": 64,
+        "evalFile": "nn-3475407dc199.nnue"
+      },
+      "files": [
+        {
+          "name": "nn-3475407dc199.nnue",
+          "url": "https://tests.stockfishchess.org/api/nn/nn-3475407dc199.nnue",
+          "sha256": "3475407dc19973ea44467678634cce023d620e419770c111cc8937fe6689ec87",
+          "size": 47721371
+        }
+      ]
+    },
+    {
+      "id": "ethereal",
+      "name": "Ethereal",
+      "version": "14",
+      "backend": "uci_native",
+      "origin": "optional",
+      "binary": "libethereal.so",
+      "elo": 3300,
+      "license": "GPLv3",
+      "homepage": "https://github.com/AndyGrant/Ethereal",
+      "sourceUrl": "https://github.com/AndyGrant/Ethereal",
+      "description": "Klassische C-Engine mit handgebauter Bewertung. Spielt positioneller und ruhiger als Stockfish und ist dabei nur wenige hundert Kilobyte groß.",
+      "tags": [
+        "Positionell",
+        "Klein"
+      ],
+      "config": {
+        "threads": 1,
+        "hashMb": 64
+      }
+    },
+    {
+      "id": "monolith",
+      "name": "Monolith",
+      "version": "2.01",
+      "backend": "uci_native",
+      "origin": "optional",
+      "binary": "libmonolith.so",
+      "elo": 3000,
+      "license": "GPLv3",
+      "homepage": "https://github.com/cimarronOST/Monolith",
+      "sourceUrl": "https://github.com/cimarronOST/Monolith",
+      "description": "Klassische Engine mit sehr sauberem Code und aggressivem, taktischem Stil. Version 2.01, weil Version 3 C++-Threads nutzt, die Androids Standardbibliothek nicht anbietet.",
+      "tags": [
+        "Taktisch",
+        "Klein"
+      ],
+      "config": {
+        "threads": 1,
+        "hashMb": 64
+      }
+    },
+    {
+      "id": "internal",
+      "name": "Interne Engine",
+      "version": "1.0",
+      "backend": "internal",
+      "origin": "optional",
+      "elo": 700,
+      "license": "Teil der App",
+      "description": "Die eingebaute Notlösung: greift eine Figur, wenn sie sich lohnt, und sucht einen Zug tief. Für Anfänger und zum Testen.",
+      "tags": [
+        "Schwach",
+        "Immer verfügbar"
+      ],
+      "config": {
+        "threads": 1,
+        "hashMb": 0
+      }
+    },
+    {
+      "id": "stockfish-19",
+      "name": "Stockfish",
+      "version": "19",
+      "backend": "external_uci",
+      "origin": "download",
+      "elo": 3670,
+      "license": "GPLv3",
+      "homepage": "https://stockfishchess.org/blog/2026/stockfish-19/",
+      "sourceUrl": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+      "description": "Das aktuelle Release vom 05.09.2026, rund 40 Elo stärker als 17.1. Natives Binary für arm64-v8a.",
+      "tags": [
+        "Stärker",
+        "Neu"
+      ],
+      "available": false,
+      "note": "Native Engine-Binaries dürfen unter Android 10+ nicht aus dem App-Speicher gestartet werden. Der Download kommt mit dem Engine-Runtime-Paket."
+    },
+    {
+      "id": "maia3-5m",
+      "name": "Maia 3",
+      "version": "5M",
+      "backend": "onnx",
+      "origin": "download",
+      "elo": 1500,
+      "license": "AGPL-3.0",
+      "homepage": "https://maiachess.com",
+      "sourceUrl": "https://github.com/CSSLab/maia3",
+      "description": "Neuronales Netz, das den wahrscheinlichsten menschlichen Zug vorhersagt statt zu rechnen. Auf Spielstärke 1500 konditioniert – ein ehrlicher Trainingspartner. Kleinstes Maia-3-Netz, rund 10 MB. Spielt nur Standard-Schach, keine Varianten.",
+      "tags": [
+        "Menschenähnlich",
+        "Training",
+        "Neuronal"
+      ],
+      "files": [
+        {
+          "name": "maia3-5m.fp16.onnx",
+          "url": "https://huggingface.co/bqrio/maia3-onnx/resolve/main/maia3-5m.fp16.onnx",
+          "sha256": "ca22fc3031975932e693f9758149302efc177749165443ed52de828add8864fa",
+          "size": 10755531
+        }
+      ],
+      "variants": [
+        "standard"
+      ]
+    },
+    {
+      "id": "maia3-23m",
+      "name": "Maia 3",
+      "version": "23M",
+      "backend": "onnx",
+      "origin": "download",
+      "elo": 2000,
+      "license": "AGPL-3.0",
+      "homepage": "https://maiachess.com",
+      "sourceUrl": "https://github.com/CSSLab/maia3",
+      "description": "Die große Maia-3-Variante: deutlich feinere Zugauswahl, spielt eher wie ein starker Vereinsspieler. Rund 46 MB Download. Spielt nur Standard-Schach, keine Varianten.",
+      "tags": [
+        "Menschenähnlich",
+        "Stark",
+        "Neuronal"
+      ],
+      "files": [
+        {
+          "name": "maia3-23m.fp16.onnx",
+          "url": "https://huggingface.co/bqrio/maia3-onnx/resolve/main/maia3-23m.fp16.onnx",
+          "sha256": "c093e4c54ead1ca51a4a52135c0f21f64b8639a0469d128fea0d0cdeb6fac1c7",
+          "size": 45790054
+        }
+      ],
+      "variants": [
+        "standard"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild
+.cxx
+
+# Engine source trees created by the build scripts
+tools/stockfish-build/
+tools/engines-build/
+
+# Local backups/snapshots
+backup/
+*.tar.gz
+
+# Signing material — never commit these
+*.jks
+*.keystore
+keystore.properties

@@ -1,0 +1,31 @@
+Stockfish 17.1 — Android build patch
+====================================
+
+Applies to: https://github.com/official-stockfish/Stockfish tag sf_17.1
+File:       src/nnue/network.cpp
+
+Why: the Android binary has to stay small (about 1 MB instead of ~76 MB).
+     With NNUE_EMBEDDING_OFF the two NNUE networks are not compiled into the
+     executable; the app downloads them at install time (see
+     app/src/main/assets/engines/catalog.json). Stockfish reads them through
+     the EvalFile / EvalFileSmall UCI options.
+
+Note: the added line "// Netze werden nachgeladen, nicht eingebettet." is a
+     source comment only ("networks are downloaded, not embedded") and has no
+     effect on the compiled binary. It is kept verbatim so that this patch
+     matches the source that libstockfish.so was actually built from.
+
+The same change is applied by tools/build-stockfish.sh, which is what the
+shipped binaries were built with.
+
+--- a/src/nnue/network.cpp
++++ b/src/nnue/network.cpp
+@@ -26,6 +26,8 @@
+ #include <type_traits>
+ #include <vector>
+ 
++// Netze werden nachgeladen, nicht eingebettet.
++#define NNUE_EMBEDDING_OFF
+ #define INCBIN_SILENCE_BITCODE_WARNING
+ #include "../incbin/incbin.h"
+ 
