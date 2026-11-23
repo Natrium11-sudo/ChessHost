@@ -36,7 +36,7 @@ Screenshots taken on a Pixel 10 Pro XL emulator (Android 17, API 37), English UI
 
 Beta builds are published as GitHub pre-releases:
 
-**[Download the latest beta APK](../../releases/latest)**
+**[Download the latest beta APK](https://github.com/Natrium11-sudo/Schach/releases/latest)**
 
 - Android 8.0 (API 26) or newer, `arm64-v8a` or `x86_64`.
 - Signed with a self-signed release key, so Android shows the usual "install from
