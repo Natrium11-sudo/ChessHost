@@ -16,8 +16,8 @@ android {
         applicationId = "org.example.chesshost"
         minSdk = 26
         targetSdk = 37
-        versionCode = 1
-        versionName = "1.0.0-beta1"
+        versionCode = 2
+        versionName = "1.0.0-beta2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         // Nur die ABIs, für die es native Engines gibt. 32-Bit-Geräte hätten
